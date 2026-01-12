@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 interface ProductCardProps {
@@ -7,9 +8,10 @@ interface ProductCardProps {
   title: string;
   description: string;
   delay?: number;
+  link?: string;
 }
 
-const ProductCard = ({ image, badge, title, description, delay = 0 }: ProductCardProps) => {
+const ProductCard = ({ image, badge, title, description, delay = 0, link }: ProductCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -31,9 +33,18 @@ const ProductCard = ({ image, badge, title, description, delay = 0 }: ProductCar
       <div className="px-4 pb-6">
         <h3 className="text-xl font-semibold text-stone-900 mb-2">{title}</h3>
         <p className="text-sm text-stone-500 mb-4">{description}</p>
-        <button className="hover:bg-stone-900 hover:text-white transition-colors flex gap-2 font-medium text-stone-900 w-full border border-stone-200 rounded-xl py-3 items-center justify-center">
-          Check Details <ArrowUpRight className="w-4 h-4" />
-        </button>
+        {link ? (
+          <Link
+            to={link}
+            className="hover:bg-stone-900 hover:text-white transition-colors flex gap-2 font-medium text-stone-900 w-full border border-stone-200 rounded-xl py-3 items-center justify-center"
+          >
+            Check Details <ArrowUpRight className="w-4 h-4" />
+          </Link>
+        ) : (
+          <button className="hover:bg-stone-900 hover:text-white transition-colors flex gap-2 font-medium text-stone-900 w-full border border-stone-200 rounded-xl py-3 items-center justify-center">
+            Check Details <ArrowUpRight className="w-4 h-4" />
+          </button>
+        )}
       </div>
     </motion.div>
   );

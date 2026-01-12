@@ -1,5 +1,13 @@
 import { motion } from "framer-motion";
-import { TrendingUp } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+
+const reasons = [
+  "Over 35 years of industry experience",
+  "Strategic presence across the U.S., Caribbean, and Latin America",
+  "Access to exclusive, high-performance fishing gear",
+  "Trusted supplier for commercial, charter, and elite sport-fishing clients",
+  "Commitment to quality, authenticity, and expert support",
+];
 
 const LocationSection = () => {
   return (
@@ -7,7 +15,7 @@ const LocationSection = () => {
       <div className="absolute inset-0 opacity-40">
         <img
           src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3acac5be-cd22-4ef1-b094-72fcb7753382_3840w.jpg"
-          alt="Bali Coast"
+          alt="Offshore Fishing"
           className="w-full h-full object-cover"
         />
       </div>
@@ -21,50 +29,34 @@ const LocationSection = () => {
           viewport={{ once: true }}
         >
           <span className="uppercase block text-sm font-medium text-stone-400 tracking-wide mb-2">
-            The Market Shift
+            Why Choose Us
           </span>
-          <h2 className="text-4xl font-medium tracking-tight mb-6">Why?</h2>
-          <p className="leading-relaxed text-lg font-light text-stone-300 mb-8">
-            Users are demanding "community-in-a-box" and prioritizing on-site wellness amenities
-            over square footage. Habitat.s indexes the data that actually matters to the modern
-            buyer
-          </p>
-
+          <h2 className="text-4xl font-medium tracking-tight mb-6">Why Choose Carib Petroleum Inc.?</h2>
+          
           <div className="mb-8 space-y-4">
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-white/5">
-                <span className="text-sm font-bold">01</span>
+            {reasons.map((reason, index) => (
+              <div key={index} className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-white/5 flex-shrink-0">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+                </div>
+                <span className="text-stone-300">{reason}</span>
               </div>
-              <span className="text-stone-300">
-                Define your Lifestyle: Stop filtering by square footage. Set your parameters for air
-                quality, community vibe, and wellness amenities.
-              </span>
-            </div>
-            <div className="flex gap-4 items-center">
-              <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-white/5">
-                <span className="text-sm font-bold">02</span>
-              </div>
-              <span className="text-stone-300">
-                Verified Intelligence: Real-time data on AQI (Air Quality), noise pollution, and
-                verified internet upload speeds. No surprises.
-              </span>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-white/5">
-                <span className="text-sm font-bold">03</span>
-              </div>
-              <span className="text-stone-300">
-                Sovereign Living: Identify properties with energy independence (solar/water) and
-                regenerative design credentials.
-              </span>
-            </div>
+            ))}
           </div>
 
-          <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
-            <TrendingUp className="w-6 h-6 text-emerald-400 mb-3" />
+          <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 mb-6">
+            <h3 className="text-xl font-semibold mb-3">Equip Your Vessel with the Best</h3>
             <p className="text-sm text-stone-200">
-              Legacy portals were built to sell concrete boxes. Habitat.s is built to find your
-              sanctuary. See why the modern nomad is switching.
+              When performance matters and failure is not an option, Carib Petroleum Inc. delivers equipment that meets the highest standards of offshore fishing excellence.
+            </p>
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+            <p className="text-stone-300 leading-relaxed">
+              Explore our premium fishing gear and elevate your offshore experience. Complete your offshore setup with high-quality fishing accessories designed for durability, performance, and reliability in demanding marine environments. Our accessories are carefully selected to complement professional-grade reels, rods, and systems, ensuring seamless performance on every trip.
+            </p>
+            <p className="text-stone-400 mt-4 text-sm">
+              From essential rigging components to specialized offshore add-ons, each accessory meets the standards required for professional operations.
             </p>
           </div>
         </motion.div>

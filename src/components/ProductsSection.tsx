@@ -5,20 +5,23 @@ const products = [
   {
     image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/7b4b9f78-ba0f-4ad7-a57d-a6ee2fb82c51_800w.jpg",
     badge: "Accessories",
-    title: "Accessories:",
+    title: "Accessories",
     description: "Complete your offshore setup with high-quality fishing accessories designed for durability, performance, and reliability in demanding marine environments.",
+    link: "/accessories",
   },
   {
     image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3acac5be-cd22-4ef1-b094-72fcb7753382_800w.jpg?w=800&q=80",
     badge: "Reels & Reels Accessories",
     title: "Reels & Reels Accessories",
     description: "Complement your setup with premium reel accessories designed to enhance durability, efficiency, and control—ensuring smooth operation, heavy-load performance, and long-term dependability on every offshore expedition.",
+    link: "/reels-accessories",
   },
   {
     image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/b0e0a442-0de4-4039-9e73-1d09ca7c7d45_800w.jpg",
-    badge: "Highly Valued Grade",
+    badge: "Commercial Grade",
     title: "High-Value & Commercial-Grade Products",
-    description: "(Future Feature) Participate in the value you create. Our roadmap includes fractional ownership models for the communities you love.",
+    description: "Industrial equipment for commercial operations including electric pallet trucks, forklifts, stackers, and weighing solutions.",
+    link: "/commercial-grade",
   },
 ];
 
