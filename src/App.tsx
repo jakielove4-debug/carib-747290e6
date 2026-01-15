@@ -18,6 +18,7 @@ import CommercialGrade from "./pages/CommercialGrade";
 import GenericAccessoryPage from "./pages/GenericAccessoryPage";
 import FAQ from "./pages/FAQ";
 import Policy from "./pages/Policy";
+import Refrigeration from "./pages/Refrigeration";
 
 const queryClient = new QueryClient();
 
@@ -39,7 +40,9 @@ const App = () => (
             <Route path="/accessories/:category" element={<GenericAccessoryPage />} />
             <Route path="/reels-accessories" element={<ReelsAccessories />} />
             <Route path="/commercial-grade" element={<CommercialGrade />} />
+            <Route path="/refrigeration" element={<Refrigeration />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/policy" element={<Policy />} />
             <Route path="/policy" element={<Policy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

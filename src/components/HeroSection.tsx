@@ -38,7 +38,7 @@ const HeroSection = () => {
             href="#units"
             className="hover:text-white hover:bg-white/10 transition-all duration-300 text-sm text-white/90 rounded-full py-2 px-5"
           >
-            Lifestyle
+            Equipment
           </a>
           <a
             href="#video"
@@ -71,7 +71,7 @@ const HeroSection = () => {
             <Instagram className="w-4 h-4" />
           </a>
           <a
-            href="#"
+            href="tel:3055634807"
             className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white hover:bg-white/20 transition-all"
           >
             <Phone className="w-4 h-4" />
@@ -97,7 +97,7 @@ const HeroSection = () => {
         >
           <div className="flex flex-col gap-2">
             <a href="#about" className="text-white py-2 px-4 hover:bg-white/10 rounded-lg">About US</a>
-            <a href="#units" className="text-white py-2 px-4 hover:bg-white/10 rounded-lg">Lifestyle</a>
+            <a href="#units" className="text-white py-2 px-4 hover:bg-white/10 rounded-lg">Equipment</a>
             <a href="#video" className="text-white py-2 px-4 hover:bg-white/10 rounded-lg">Product</a>
             <a href="#contact" className="text-white py-2 px-4 hover:bg-white/10 rounded-lg">Contact</a>
           </div>
