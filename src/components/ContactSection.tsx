@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 
 const ContactSection = () => {
@@ -41,11 +41,11 @@ const ContactSection = () => {
               </div>
               <div>
                 <span className="block text-sm text-stone-400">Email</span>
-                <a
-                  href="mailto:info@habitats.com"
+              <a
+                  href="mailto:wjyh762185@gmail.com"
                   className="hover:underline text-lg font-medium text-stone-900"
                 >
-                  info@habitats.com
+                  wjyh762185@gmail.com
                 </a>
               </div>
             </div>
@@ -55,12 +55,24 @@ const ContactSection = () => {
               </div>
               <div>
                 <span className="block text-sm text-stone-400">Phone</span>
-                <a
-                  href="tel:+6281239838440"
+              <a
+                  href="tel:3055634807"
                   className="text-lg font-medium text-stone-900 hover:underline"
                 >
-                  +62 812 3983 8440
+                  (305) 563-4807
                 </a>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 group">
+              <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center group-hover:bg-stone-900 group-hover:text-white transition-colors">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="block text-sm text-stone-400">Address</span>
+                <span className="text-lg font-medium text-stone-900">
+                  3169 VIA ABITARE WAY<br />
+                  MIAMI, FL 33133
+                </span>
               </div>
             </div>
           </div>

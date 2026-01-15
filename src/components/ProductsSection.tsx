@@ -23,6 +23,13 @@ const products = [
     description: "Industrial equipment for commercial operations including electric pallet trucks, forklifts, stackers, and weighing solutions.",
     link: "/commercial-grade",
   },
+  {
+    image: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=800&q=80",
+    badge: "Refrigeration & Farming",
+    title: "Commercial Refrigeration & Farming Equipment",
+    description: "Professional-grade refrigeration from Hoshizaki and Turbo Air, plus compact track loaders and dumpers for farming operations.",
+    link: "/refrigeration",
+  },
 ];
 
 const ProductsSection = () => {
