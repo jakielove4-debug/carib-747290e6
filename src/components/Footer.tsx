@@ -5,7 +5,10 @@ const Footer = () => {
         <span className="font-semibold text-stone-900 tracking-tight">Carib Petroleum Inc</span>
       </div>
 
-      <div className="flex gap-8 text-sm font-medium text-stone-500">
+      <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm font-medium text-stone-500">
+        <a href="/tracking" className="hover:text-stone-900 transition-colors">
+          Track Shipment
+        </a>
         <a href="/policy" className="hover:text-stone-900 transition-colors">
           Rules and Policy
         </a>
