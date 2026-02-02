@@ -19,6 +19,9 @@ import GenericAccessoryPage from "./pages/GenericAccessoryPage";
 import FAQ from "./pages/FAQ";
 import Policy from "./pages/Policy";
 import Refrigeration from "./pages/Refrigeration";
+import Tracking from "./pages/Tracking";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const queryClient = new QueryClient();
 
@@ -43,7 +46,9 @@ const App = () => (
             <Route path="/refrigeration" element={<Refrigeration />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/policy" element={<Policy />} />
-            <Route path="/policy" element={<Policy />} />
+            <Route path="/tracking" element={<Tracking />} />
+            <Route path="/admin" element={<AdminLogin />} />
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
