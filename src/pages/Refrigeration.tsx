@@ -10,12 +10,32 @@ import turboAirM3r72 from "@/assets/turbo-air-m3r72.jpg";
 import turboAirM3r47 from "@/assets/turbo-air-m3r47.jpg";
 import baumalightTrl620d from "@/assets/baumalight-trl620d.jpg";
 import cormidiC85 from "@/assets/cormidi-c85.jpg";
+import traulsenRefrigerator from "@/assets/traulsen-refrigerator.jpg";
+import trueRefrigerator from "@/assets/true-refrigerator.jpg";
+import johnDeereX9 from "@/assets/john-deere-x9.jpg";
+import caseIhHarvester from "@/assets/case-ih-harvester.jpg";
+import hobartDishwasher from "@/assets/hobart-dishwasher.jpg";
+import winterhalterDishwasher from "@/assets/winterhalter-dishwasher.jpg";
 
 const categories = [
   {
-    title: "Commercial Refrigerators",
-    description: "Professional-grade refrigeration solutions for restaurants, farms, and industrial operations.",
+    title: "Premium Commercial Refrigerators",
+    description: "High-end commercial refrigeration from industry leaders Traulsen, Hoshizaki, True, and Turbo Air.",
     products: [
+      {
+        name: "Traulsen G10012P Pass-Thru Refrigerator (24.85 cu. ft)",
+        price: 8214,
+        priceDisplay: "$8,214",
+        description: "Premium 29.88\" pass-through refrigerator with superior cooling technology. Features stainless steel construction and energy-efficient design for demanding commercial environments.",
+        image: traulsenRefrigerator,
+      },
+      {
+        name: "True STG2R-2S SPEC SERIES® 2-Door Refrigerator (50.59 cu. ft)",
+        price: 5584,
+        priceDisplay: "$5,584",
+        description: "SPEC SERIES® two-section reach-in refrigerator with bottom-mounted self-contained refrigeration. Energy Star certified with superior temperature control.",
+        image: trueRefrigerator,
+      },
       {
         name: "Hoshizaki R3A‑HS 82.5″ Steelheart Refrigerator",
         price: 12300,
@@ -50,6 +70,81 @@ const categories = [
         priceDisplay: "$7,900",
         description: "Two-door solid reach-in from a respected commercial line, robust cooling, and durable build for reliable everyday performance.",
         image: turboAirM3r47,
+      },
+    ],
+  },
+  {
+    title: "Industrial Combine Harvesters",
+    description: "High-capacity combine harvesters from John Deere and Case IH for large-scale farming operations.",
+    products: [
+      {
+        name: "John Deere X9 1000 Combine Harvester",
+        price: 719900,
+        priceDisplay: "$719,900",
+        description: "The flagship X9 series delivers unmatched productivity with class-leading grain tank capacity and unloading speed. Features ActiveVision™ cameras and Combine Advisor™ for automatic adjustments. 550+ HP engine with dual-rotor threshing system.",
+        image: johnDeereX9,
+      },
+      {
+        name: "John Deere S7 800 Combine Harvester",
+        price: 485000,
+        priceDisplay: "$485,000",
+        description: "Re-imagined S7 with enhanced automation and ExactApply™ technology. Features advanced grain quality camera system and automatic speed adjustment based on crop volume. Ideal for wheat, corn, and soybeans.",
+        image: johnDeereX9,
+      },
+      {
+        name: "Case IH Axial-Flow 9250 Combine",
+        price: 505302,
+        priceDisplay: "$505,302",
+        description: "550 HP powerhouse with legendary Axial-Flow® single rotor technology for gentle, efficient threshing. Features AFS Harvest Command™ automation and 410-bushel grain tank. Industry-leading residue management.",
+        image: caseIhHarvester,
+      },
+      {
+        name: "Case IH Axial-Flow 8250 Combine",
+        price: 425000,
+        priceDisplay: "$425,000",
+        description: "450 HP rotary combine with Axial-Flow® technology delivering superior grain quality. Features AFS Pro 1200 display, 350-bushel grain tank, and advanced yield monitoring for precision agriculture.",
+        image: caseIhHarvester,
+      },
+    ],
+  },
+  {
+    title: "Industrial Dishwashers for Hotels & Mass Catering",
+    description: "High-capacity conveyor and rack dishwashers from Hobart and Winterhalter for hotels, hospitals, and large-scale food service operations.",
+    products: [
+      {
+        name: "Hobart CL44eN Conveyor Dishwasher (202 racks/hour)",
+        price: 38500,
+        priceDisplay: "$38,500",
+        description: "Single tank high-temperature conveyor dishwasher processing 202 racks per hour. Features Opti-RinSe™ system using only 0.62 gallons per rack, Rapid Return conveyor drive, and Energy Star® certification. Ideal for hotels and large restaurants.",
+        image: hobartDishwasher,
+      },
+      {
+        name: "Hobart CL54eN Multi-Tank Conveyor Dishwasher",
+        price: 52000,
+        priceDisplay: "$52,000",
+        description: "Premium multi-tank conveyor system with prewash, power wash, and rinse zones. Processes up to 250 racks/hour with advanced Opti-RinSe™ technology. Built for 24/7 hotel and hospital operations.",
+        image: hobartDishwasher,
+      },
+      {
+        name: "Winterhalter MTR Rack Conveyor (up to 355 racks/hour)",
+        price: 65000,
+        priceDisplay: "$65,000",
+        description: "Top-of-the-line 2-4 tank rack conveyor system for the highest volume operations. Features Energy™ heat recovery, automatic basket recognition, and connected wash® IoT monitoring. Perfect for cruise ships and convention centers.",
+        image: winterhalterDishwasher,
+      },
+      {
+        name: "Winterhalter CTR Compact Rack Conveyor (195 racks/hour)",
+        price: 42000,
+        priceDisplay: "$42,000",
+        description: "Compact 1-3 tank conveyor starting from 1,400mm length. Ideal for space-constrained kitchens requiring high-volume washing. Features integrated hood dryer option and ConnectedWash® smart monitoring.",
+        image: winterhalterDishwasher,
+      },
+      {
+        name: "Winterhalter PT-L Passthrough Dishwasher",
+        price: 18500,
+        priceDisplay: "$18,500",
+        description: "Premium passthrough dishwasher with 60 racks/hour capacity. Features EnergyPlus heat pump technology reducing energy consumption by 75%. Double-wall insulated hood and touch-screen controls.",
+        image: winterhalterDishwasher,
       },
     ],
   },
@@ -98,7 +193,7 @@ const Refrigeration = () => {
       <div className="max-w-7xl mx-auto">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-stone-500 hover:text-stone-900 transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
@@ -110,13 +205,13 @@ const Refrigeration = () => {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <h1 className="text-4xl sm:text-5xl font-medium text-stone-900 tracking-tight mb-4">
-            Commercial Refrigeration & Farming Equipment
+          <h1 className="text-4xl sm:text-5xl font-medium text-foreground tracking-tight mb-4">
+            Commercial Refrigeration, Harvesters & Industrial Equipment
           </h1>
-          <p className="text-lg text-stone-500 max-w-3xl">
-            Professional-grade refrigeration and farming machinery for commercial operations. 
-            From Hoshizaki and Turbo Air refrigerators to Baumalight and Cormidi loaders — 
-            equipment built for reliability and performance.
+          <p className="text-lg text-muted-foreground max-w-3xl">
+            Premium commercial equipment for large-scale operations. From Hoshizaki and Turbo Air refrigerators 
+            to John Deere & Case IH harvesters, plus Hobart and Winterhalter industrial dishwashers — 
+            equipment built for maximum productivity and reliability.
           </p>
         </motion.div>
 
@@ -128,9 +223,9 @@ const Refrigeration = () => {
             transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
             className="mb-16"
           >
-            <h2 className="text-2xl font-semibold text-stone-900 mb-2">{category.title}</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-2">{category.title}</h2>
             {category.description && (
-              <p className="text-stone-500 mb-6">{category.description}</p>
+              <p className="text-muted-foreground mb-6">{category.description}</p>
             )}
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -140,9 +235,9 @@ const Refrigeration = () => {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-stone-100"
+                  className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-border"
                 >
-                  <div className="aspect-square overflow-hidden bg-stone-50">
+                  <div className="aspect-square overflow-hidden bg-muted">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -150,18 +245,18 @@ const Refrigeration = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-lg font-semibold text-stone-900 mb-2 line-clamp-2">
+                    <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-2">
                       {product.name}
                     </h3>
-                    <p className="text-2xl font-bold text-stone-900 mb-3">
+                    <p className="text-2xl font-bold text-primary mb-3">
                       {product.priceDisplay}
                     </p>
-                    <p className="text-sm text-stone-500 mb-4 line-clamp-3">
+                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                       {product.description}
                     </p>
                     <button
                       onClick={() => handleAddToCart(product)}
-                      className="w-full bg-stone-900 text-white py-3 rounded-xl hover:bg-stone-800 transition-colors flex items-center justify-center gap-2 font-medium"
+                      className="w-full bg-primary text-primary-foreground py-3 rounded-xl hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 font-medium"
                     >
                       <ShoppingCart className="w-4 h-4" />
                       Add to Cart

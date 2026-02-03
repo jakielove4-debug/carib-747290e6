@@ -25,9 +25,9 @@ const products = [
   },
   {
     image: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=800&q=80",
-    badge: "Refrigeration & Farming",
-    title: "Commercial Refrigeration & Farming Equipment",
-    description: "Professional-grade refrigeration from Hoshizaki and Turbo Air, plus compact track loaders and dumpers for farming operations.",
+    badge: "Industrial Equipment",
+    title: "Refrigeration, Harvesters & Industrial Dishwashers",
+    description: "Premium commercial refrigerators, John Deere & Case IH harvesters, plus Hobart and Winterhalter industrial dishwashers for hotels.",
     link: "/refrigeration",
   },
 ];
