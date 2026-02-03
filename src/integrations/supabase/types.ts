@@ -42,7 +42,7 @@ export type Database = {
           package_description: string
           shipping_address: string
           status?: Database["public"]["Enums"]["shipment_status"]
-          tracking_number: string
+          tracking_number?: string
           updated_at?: string
           weight: number
           weight_unit?: string
