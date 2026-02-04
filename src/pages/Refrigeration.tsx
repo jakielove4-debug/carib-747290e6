@@ -12,8 +12,10 @@ import baumalightTrl620d from "@/assets/baumalight-trl620d.jpg";
 import cormidiC85 from "@/assets/cormidi-c85.jpg";
 import traulsenRefrigerator from "@/assets/traulsen-refrigerator.jpg";
 import trueRefrigerator from "@/assets/true-refrigerator.jpg";
-import johnDeereX9 from "@/assets/john-deere-x9.jpg";
-import caseIhHarvester from "@/assets/case-ih-harvester.jpg";
+import johnDeereS100 from "@/assets/john-deere-s100.jpg";
+import johnDeereS200 from "@/assets/john-deere-s200.jpg";
+import caseIh4250 from "@/assets/case-ih-4250.jpg";
+import caseIh5250 from "@/assets/case-ih-5250.jpg";
 import hobartDishwasher from "@/assets/hobart-dishwasher.jpg";
 import winterhalterDishwasher from "@/assets/winterhalter-dishwasher.jpg";
 import winterhalterMtr from "@/assets/winterhalter-mtr.jpg";
@@ -85,28 +87,28 @@ const categories = [
         price: 89500,
         priceDisplay: "$89,500",
         description: "Entry-level combine with reliable performance for mid-size operations. Features 150-bushel grain tank, efficient threshing system, and easy-to-use controls. Perfect for wheat, corn, and soybeans.",
-        image: johnDeereX9,
+        image: johnDeereS100,
       },
       {
         name: "John Deere S200 Combine Harvester",
         price: 95900,
         priceDisplay: "$95,900",
         description: "Enhanced combine with improved grain handling and advanced monitoring. Features 175-bushel grain tank, AutoTrac™ guidance system, and superior residue management for clean fields.",
-        image: johnDeereX9,
+        image: johnDeereS200,
       },
       {
         name: "Case IH Axial-Flow 4250 Combine",
         price: 78500,
         priceDisplay: "$78,500",
         description: "Compact Axial-Flow® combine with legendary single rotor technology for gentle, efficient threshing. Ideal for small to medium farms with 250-bushel grain tank capacity.",
-        image: caseIhHarvester,
+        image: caseIh4250,
       },
       {
         name: "Case IH Axial-Flow 5250 Combine",
         price: 92000,
         priceDisplay: "$92,000",
         description: "Mid-range rotary combine with Axial-Flow® technology delivering superior grain quality. Features AFS Pro display, 300-bushel grain tank, and yield monitoring for precision agriculture.",
-        image: caseIhHarvester,
+        image: caseIh5250,
       },
     ],
   },
