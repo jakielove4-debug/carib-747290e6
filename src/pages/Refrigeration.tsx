@@ -16,6 +16,9 @@ import johnDeereX9 from "@/assets/john-deere-x9.jpg";
 import caseIhHarvester from "@/assets/case-ih-harvester.jpg";
 import hobartDishwasher from "@/assets/hobart-dishwasher.jpg";
 import winterhalterDishwasher from "@/assets/winterhalter-dishwasher.jpg";
+import winterhalterMtr from "@/assets/winterhalter-mtr.jpg";
+import winterhalterCtr from "@/assets/winterhalter-ctr.jpg";
+import winterhalterPt from "@/assets/winterhalter-pt.jpg";
 
 const categories = [
   {
@@ -130,21 +133,21 @@ const categories = [
         price: 65000,
         priceDisplay: "$65,000",
         description: "Top-of-the-line 2-4 tank rack conveyor system for the highest volume operations. Features Energy™ heat recovery, automatic basket recognition, and connected wash® IoT monitoring. Perfect for cruise ships and convention centers.",
-        image: winterhalterDishwasher,
+        image: winterhalterMtr,
       },
       {
         name: "Winterhalter CTR Compact Rack Conveyor (195 racks/hour)",
         price: 42000,
         priceDisplay: "$42,000",
         description: "Compact 1-3 tank conveyor starting from 1,400mm length. Ideal for space-constrained kitchens requiring high-volume washing. Features integrated hood dryer option and ConnectedWash® smart monitoring.",
-        image: winterhalterDishwasher,
+        image: winterhalterCtr,
       },
       {
         name: "Winterhalter PT-L Passthrough Dishwasher",
         price: 18500,
         priceDisplay: "$18,500",
         description: "Premium passthrough dishwasher with 60 racks/hour capacity. Features EnergyPlus heat pump technology reducing energy consumption by 75%. Double-wall insulated hood and touch-screen controls.",
-        image: winterhalterDishwasher,
+        image: winterhalterPt,
       },
     ],
   },
