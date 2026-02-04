@@ -52,6 +52,12 @@ const HeroSection = () => {
           >
             Contact
           </a>
+          <a
+            href="/tracking"
+            className="hover:text-white hover:bg-white/10 transition-all duration-300 text-sm text-white/90 rounded-full py-2 px-5"
+          >
+            Track Shipment
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -100,6 +106,7 @@ const HeroSection = () => {
             <a href="#units" className="text-white py-2 px-4 hover:bg-white/10 rounded-lg">Equipment</a>
             <a href="#video" className="text-white py-2 px-4 hover:bg-white/10 rounded-lg">Product</a>
             <a href="#contact" className="text-white py-2 px-4 hover:bg-white/10 rounded-lg">Contact</a>
+            <a href="/tracking" className="text-white py-2 px-4 hover:bg-white/10 rounded-lg">Track Shipment</a>
           </div>
         </motion.div>
       )}
