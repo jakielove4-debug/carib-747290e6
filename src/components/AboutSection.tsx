@@ -33,6 +33,22 @@ const AboutSection = () => {
             performance, durability, and innovation, ensuring our customers are equipped for success
             in deep waters.
           </p>
+          
+          <h3 className="text-xl font-medium text-stone-900 mt-8 mb-4">
+            Refrigeration, Harvesters & Industrial Dishwashers
+          </h3>
+          <p className="leading-relaxed text-base text-stone-500 mb-4">
+            At Carib Petroleum Inc, we go beyond energy solutions to supply high-performance commercial and agricultural equipment that supports businesses across hospitality, agriculture, and food service industries.
+          </p>
+          <p className="leading-relaxed text-base text-stone-500 mb-4">
+            <strong className="text-stone-700">Premium Commercial Refrigeration:</strong> We supply reliable, energy-efficient commercial refrigerators and cold-storage solutions designed for restaurants, supermarkets, farms, warehouses, and food distribution facilities.
+          </p>
+          <p className="leading-relaxed text-base text-stone-500 mb-4">
+            <strong className="text-stone-700">Agricultural Harvesting Equipment:</strong> We provide access to trusted John Deere and Case IH harvesters, known worldwide for their performance, reliability, and advanced harvesting technology.
+          </p>
+          <p className="leading-relaxed text-base text-stone-500 mb-4">
+            <strong className="text-stone-700">Industrial Dishwashing Systems:</strong> For hotels, restaurants, hospitals, and large-scale kitchens, we supply Hobart and Winterhalter industrial dishwashers engineered for speed, sanitation, and efficiency.
+          </p>
         </motion.div>
 
         {/* Right Side Image */}
