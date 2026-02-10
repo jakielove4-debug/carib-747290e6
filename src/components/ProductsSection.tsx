@@ -30,6 +30,13 @@ const products = [
     description: "Premium commercial refrigerators, John Deere & Case IH harvesters, plus Hobart and Winterhalter industrial dishwashers for hotels.",
     link: "/refrigeration",
   },
+  {
+    image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=800&q=80",
+    badge: "Medical Equipment",
+    title: "Medical & Assistive Equipment",
+    description: "Certified medical devices for home & clinical use—respiratory, cardiac, orthopedic, vision, hearing, and more.",
+    link: "/medical-equipment",
+  },
 ];
 
 const ProductsSection = () => {

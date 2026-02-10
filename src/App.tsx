@@ -22,6 +22,7 @@ import Refrigeration from "./pages/Refrigeration";
 import Tracking from "./pages/Tracking";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
+import MedicalEquipment from "./pages/MedicalEquipment";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/medical-equipment" element={<MedicalEquipment />} />
             <Route path="/accessories" element={<Accessories />} />
             <Route path="/accessories/bow-retrievers" element={<BowRetrievers />} />
             <Route path="/accessories/bow-retrievers/savur" element={<Savur />} />
