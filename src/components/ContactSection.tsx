@@ -56,10 +56,10 @@ const ContactSection = () => {
               <div>
                 <span className="block text-sm text-stone-400">Phone</span>
               <a
-                  href="tel:3055634807"
-                  className="text-lg font-medium text-stone-900 hover:underline"
-                >
-                  (305) 563-4807
+                  href="tel:4692751548"
+                   className="text-lg font-medium text-stone-900 hover:underline"
+                 >
+                   (469) 275-1548
                 </a>
               </div>
             </div>
