@@ -337,10 +337,10 @@ const MedicalEquipment = () => {
               <Mail className="w-4 h-4" /> info@caribequipment.com
             </a>
             <a
-              href="tel:3055634807"
+              href="tel:4692751548"
               className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white font-medium rounded-full py-3 px-6 hover:bg-white/20 transition-colors"
             >
-              <Phone className="w-4 h-4" /> (305) 563‑4807
+              <Phone className="w-4 h-4" /> (469) 275‑1548
             </a>
             <a
               href="https://caribequipment.com/"

@@ -77,7 +77,7 @@ const HeroSection = () => {
             <Instagram className="w-4 h-4" />
           </a>
           <a
-            href="tel:3055634807"
+            href="tel:4692751548"
             className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white hover:bg-white/20 transition-all"
           >
             <Phone className="w-4 h-4" />
