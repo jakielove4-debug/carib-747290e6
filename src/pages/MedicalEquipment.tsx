@@ -9,6 +9,15 @@ import {
 } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
 
+import medicalRespiratory from "@/assets/medical-respiratory.jpg";
+import medicalCardiac from "@/assets/medical-cardiac.jpg";
+import medicalOrthopedic from "@/assets/medical-orthopedic.jpg";
+import medicalFeeding from "@/assets/medical-feeding.jpg";
+import medicalVision from "@/assets/medical-vision.jpg";
+import medicalHearing from "@/assets/medical-hearing.jpg";
+import medicalEndocrine from "@/assets/medical-endocrine.jpg";
+import medicalMental from "@/assets/medical-mental.jpg";
+
 interface EquipmentItem {
   name: string;
   description: string;
@@ -22,12 +31,14 @@ interface Category {
 
 interface Section {
   heading: string;
+  image: string;
   categories: Category[];
 }
 
 const sections: Section[] = [
   {
     heading: "Respiratory & Airway Disorders",
+    image: medicalRespiratory,
     categories: [
       {
         title: "Asthma Care Equipment",
@@ -50,6 +61,7 @@ const sections: Section[] = [
   },
   {
     heading: "Congenital Heart Disease",
+    image: medicalCardiac,
     categories: [
       {
         title: "Cardiac Monitoring & Support",
@@ -63,6 +75,7 @@ const sections: Section[] = [
   },
   {
     heading: "Orthopedic & Musculoskeletal Conditions",
+    image: medicalOrthopedic,
     categories: [
       {
         title: "Spinal Disorders",
@@ -86,6 +99,7 @@ const sections: Section[] = [
   },
   {
     heading: "Feeding & Gastrointestinal Disorders",
+    image: medicalFeeding,
     categories: [
       {
         title: "Feeding Difficulties / Failure to Thrive",
@@ -99,6 +113,7 @@ const sections: Section[] = [
   },
   {
     heading: "Vision Impairments",
+    image: medicalVision,
     categories: [
       {
         title: "Blindness / Severe Visual Impairment",
@@ -112,6 +127,7 @@ const sections: Section[] = [
   },
   {
     heading: "Hearing Loss",
+    image: medicalHearing,
     categories: [
       {
         title: "Moderate–Severe Hearing Loss",
@@ -124,6 +140,7 @@ const sections: Section[] = [
   },
   {
     heading: "Endocrine & Renal Conditions",
+    image: medicalEndocrine,
     categories: [
       {
         title: "Type 1 Diabetes",
@@ -145,6 +162,7 @@ const sections: Section[] = [
   },
   {
     heading: "Behavioral & Mental Health Conditions",
+    image: medicalMental,
     categories: [
       {
         title: "Severe Anxiety / ADHD",
@@ -252,6 +270,13 @@ const MedicalEquipment = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="space-y-8 pb-4">
+                    <div className="h-48 sm:h-56 rounded-xl overflow-hidden mb-6">
+                      <img
+                        src={section.image}
+                        alt={section.heading}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     {section.categories.map((cat) => (
                       <div key={cat.title}>
                         <h3 className="text-base font-semibold text-stone-700 mb-3">{cat.title}</h3>
