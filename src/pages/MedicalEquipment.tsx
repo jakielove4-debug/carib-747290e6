@@ -209,47 +209,71 @@ const EquipmentTable = ({ items }: { items: EquipmentItem[] }) => (
   </div>
 );
 
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 25 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 const MedicalEquipment = () => {
   return (
     <div className="sm:p-4 lg:p-6 max-w-[1600px] mx-auto p-2">
       {/* Hero */}
       <motion.header
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
+        initial={{ opacity: 0, scale: 0.98 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
         className="relative rounded-4xl overflow-hidden bg-gradient-to-br from-teal-800 via-teal-900 to-stone-900 min-h-[400px] flex flex-col justify-end p-8 sm:p-12 mb-12"
       >
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=1920&q=80')] bg-cover bg-center opacity-20" />
         <div className="relative z-10">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 text-sm transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" /> Back to Home
-          </Link>
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 text-sm transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" /> Back to Home
+            </Link>
+          </motion.div>
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.2, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="text-3xl sm:text-5xl font-medium text-white tracking-tight mb-4"
           >
             Medical & Assistive Equipment
           </motion.h1>
-          <p className="text-white/70 text-lg max-w-2xl font-light">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.5 }}
+            className="text-white/70 text-lg max-w-2xl font-light"
+          >
             Reliable, certified medical equipment for home & clinical use—supporting patients with chronic conditions, disabilities, and long‑term care needs.
-          </p>
+          </motion.p>
 
           {/* Feature badges */}
-          <div className="flex flex-wrap gap-3 mt-8">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="flex flex-wrap gap-3 mt-8"
+          >
             {features.map(({ icon: Icon, label }) => (
-              <span
+              <motion.span
                 key={label}
+                variants={fadeUp}
+                whileHover={{ scale: 1.05, y: -2 }}
                 className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-full py-2 px-4"
               >
                 <Icon className="w-4 h-4" /> {label}
-              </span>
+              </motion.span>
             ))}
-          </div>
+          </motion.div>
         </div>
       </motion.header>
 
@@ -259,31 +283,44 @@ const MedicalEquipment = () => {
           {sections.map((section, sIdx) => (
             <motion.div
               key={section.heading}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: sIdx * 0.05 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: sIdx * 0.06, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true, margin: "-40px" }}
             >
-              <AccordionItem value={section.heading} className="border border-stone-200 rounded-2xl px-6 overflow-hidden">
+              <AccordionItem value={section.heading} className="border border-stone-200 rounded-2xl px-6 overflow-hidden hover:border-stone-300 transition-colors">
                 <AccordionTrigger className="text-xl font-semibold text-stone-900 hover:no-underline">
                   {section.heading}
                 </AccordionTrigger>
                 <AccordionContent>
-                  <div className="space-y-8 pb-4">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                    className="space-y-8 pb-4"
+                  >
                     <div className="h-48 sm:h-56 rounded-xl overflow-hidden mb-6">
-                      <img
+                      <motion.img
                         src={section.image}
                         alt={section.heading}
                         className="w-full h-full object-cover"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                       />
                     </div>
                     {section.categories.map((cat) => (
-                      <div key={cat.title}>
+                      <motion.div
+                        key={cat.title}
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.35 }}
+                        viewport={{ once: true }}
+                      >
                         <h3 className="text-base font-semibold text-stone-700 mb-3">{cat.title}</h3>
                         <EquipmentTable items={cat.items} />
-                      </div>
+                      </motion.div>
                     ))}
-                  </div>
+                  </motion.div>
                 </AccordionContent>
               </AccordionItem>
             </motion.div>
@@ -294,63 +331,91 @@ const MedicalEquipment = () => {
       {/* Why Choose Us */}
       <section className="px-4 sm:px-6 mb-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="bg-stone-50 rounded-3xl p-8 sm:p-12"
         >
           <h2 className="text-2xl sm:text-3xl font-medium text-stone-900 tracking-tight mb-6">
             Why Choose Carib Equipment?
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
             {[
               { title: "Trusted Suppliers", desc: "Medical‑grade products from certified manufacturers" },
               { title: "Competitive Pricing", desc: "Bulk discounts & institutional pricing available" },
               { title: "Professional Guidance", desc: "Expert equipment consultation and support" },
               { title: "Fast Fulfillment", desc: "Secure ordering with rapid nationwide shipping" },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-2xl p-6 shadow-sm">
+              <motion.div
+                key={item.title}
+                variants={fadeUp}
+                whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+              >
                 <h3 className="font-semibold text-stone-900 mb-2">{item.title}</h3>
                 <p className="text-sm text-stone-500">{item.desc}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </motion.div>
       </section>
 
       {/* CTA */}
       <section className="px-4 sm:px-6 mb-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="bg-teal-900 rounded-3xl p-8 sm:p-12 text-center"
         >
           <h2 className="text-2xl sm:text-3xl font-medium text-white tracking-tight mb-4">
             Contact Us for Quotes, Insurance Billing, or Bulk Orders
           </h2>
-          <div className="flex flex-wrap justify-center gap-4 mt-6">
-            <a
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center gap-4 mt-6"
+          >
+            <motion.a
+              variants={fadeUp}
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.97 }}
               href="mailto:info@caribequipment.com"
               className="inline-flex items-center gap-2 bg-white text-teal-900 font-medium rounded-full py-3 px-6 hover:bg-white/90 transition-colors"
             >
               <Mail className="w-4 h-4" /> info@caribequipment.com
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeUp}
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.97 }}
               href="tel:4692751548"
               className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white font-medium rounded-full py-3 px-6 hover:bg-white/20 transition-colors"
             >
               <Phone className="w-4 h-4" /> (469) 275‑1548
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeUp}
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.97 }}
               href="https://caribequipment.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white font-medium rounded-full py-3 px-6 hover:bg-white/20 transition-colors"
             >
               <Globe className="w-4 h-4" /> caribequipment.com
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </motion.div>
       </section>
 

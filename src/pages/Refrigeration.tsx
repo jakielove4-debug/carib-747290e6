@@ -181,6 +181,23 @@ const categories = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.5 },
+  },
+};
+
 const Refrigeration = () => {
   const { addItem } = useCart();
 
@@ -196,57 +213,84 @@ const Refrigeration = () => {
   return (
     <div className="min-h-screen bg-background p-4 sm:p-6 lg:p-8">
       <div className="max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.4 }}
         >
-          <ArrowLeft className="w-4 h-4" />
-          Back to Home
-        </Link>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Home
+          </Link>
+        </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="mb-12"
         >
           <h1 className="text-4xl sm:text-5xl font-medium text-foreground tracking-tight mb-4">
             Commercial Refrigeration, Harvesters & Industrial Equipment
           </h1>
-          <p className="text-lg text-muted-foreground max-w-3xl">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="text-lg text-muted-foreground max-w-3xl"
+          >
             Premium commercial equipment for large-scale operations. From Hoshizaki and Turbo Air refrigerators 
             to John Deere & Case IH harvesters, plus Hobart and Winterhalter industrial dishwashers — 
             equipment built for maximum productivity and reliability.
-          </p>
+          </motion.p>
         </motion.div>
 
         {categories.map((category, categoryIndex) => (
           <motion.div
             key={category.title}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: categoryIndex * 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
+            viewport={{ once: true, margin: "-50px" }}
             className="mb-16"
           >
-            <h2 className="text-2xl font-semibold text-foreground mb-2">{category.title}</h2>
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4 }}
+              viewport={{ once: true }}
+              className="text-2xl font-semibold text-foreground mb-2"
+            >
+              {category.title}
+            </motion.h2>
             {category.description && (
               <p className="text-muted-foreground mb-6">{category.description}</p>
             )}
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {category.products.map((product, index) => (
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-30px" }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {category.products.map((product) => (
                 <motion.div
                   key={product.name}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-border"
+                  variants={cardVariants}
+                  whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                  className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-border group"
                 >
                   <div className="aspect-square overflow-hidden bg-muted">
-                    <img
+                    <motion.img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover"
+                      whileHover={{ scale: 1.08 }}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
                     />
                   </div>
                   <div className="p-6">
@@ -259,17 +303,19 @@ const Refrigeration = () => {
                     <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                       {product.description}
                     </p>
-                    <button
+                    <motion.button
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
                       onClick={() => handleAddToCart(product)}
                       className="w-full bg-primary text-primary-foreground py-3 rounded-xl hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 font-medium"
                     >
                       <ShoppingCart className="w-4 h-4" />
                       Add to Cart
-                    </button>
+                    </motion.button>
                   </div>
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
           </motion.div>
         ))}
       </div>
