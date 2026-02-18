@@ -21,6 +21,12 @@ import winterhalterDishwasher from "@/assets/winterhalter-dishwasher.jpg";
 import winterhalterMtr from "@/assets/winterhalter-mtr.jpg";
 import winterhalterCtr from "@/assets/winterhalter-ctr.jpg";
 import winterhalterPt from "@/assets/winterhalter-pt.jpg";
+import ferrisIs6200 from "@/assets/ferris-is6200.jpg";
+import toroZmaster6000 from "@/assets/toro-zmaster-6000.jpg";
+import toroMyride72 from "@/assets/toro-myride-72.jpg";
+import zoomlionFl30 from "@/assets/zoomlion-fl30.jpg";
+import clark5000 from "@/assets/clark-5000.jpg";
+import liftHero22000 from "@/assets/lift-hero-22000.jpg";
 
 const categories = [
   {
@@ -176,6 +182,60 @@ const categories = [
         priceDisplay: "$18,000",
         description: "The CORMIDI C85 Track Dumper-Loader series are built for the Pro's, so if looking for the lowest priced track dumper this is not the option…built for quality first and foremost. Whether loading trailers, grading surfaces, or handling heavy material, the C85 gives you the confidence to work efficiently while maintaining precision and control.",
         image: cormidiC85,
+      },
+    ],
+  },
+  {
+    title: "Commercial Mower Machines",
+    description: "Professional-grade zero turn mowers for commercial landscaping and grounds maintenance.",
+    products: [
+      {
+        name: 'Ferris 5902162 72" IS6200 Zero Turn Mower 48HP CAT Diesel Full Suspension',
+        price: 30049,
+        priceDisplay: "$30,049.00",
+        description: "Premium 72-inch zero turn mower powered by a 48HP CAT Diesel engine with full suspension system. Designed for maximum comfort and productivity on large commercial properties.",
+        image: ferrisIs6200,
+      },
+      {
+        name: 'Toro 72960 Z-Master 6000 Series 60" Commercial Zero Turn Mower 31HP Kawasaki',
+        price: 15000,
+        priceDisplay: "$15,000",
+        description: "Commercial-grade 60-inch zero turn mower with 31HP Kawasaki engine. Built for professional landscapers demanding speed, durability, and a superior cut quality.",
+        image: toroZmaster6000,
+      },
+      {
+        name: 'Toro 72968 6000 MyRIDE 72" Zero Turn Mower 31HP Kawasaki',
+        price: 20500,
+        priceDisplay: "$20,500",
+        description: "72-inch zero turn mower featuring Toro's MyRIDE suspension system and 31HP Kawasaki engine. Delivers an ultra-smooth ride with exceptional cutting performance for all-day comfort.",
+        image: toroMyride72,
+      },
+    ],
+  },
+  {
+    title: "New Forklifts",
+    description: "Brand new forklifts for warehouse, industrial, and heavy-duty lifting operations.",
+    products: [
+      {
+        name: "2025 Zoomlion FL30 Forklift (6,600 lb Capacity)",
+        price: 20000,
+        priceDisplay: "~$20,000",
+        description: "Compact and reliable 6,600 lb capacity forklift ideal for warehouse and light industrial applications. Features efficient fuel consumption and ergonomic operator cabin.",
+        image: zoomlionFl30,
+      },
+      {
+        name: "2024 Clark 5,000 lb Capacity Forklift",
+        price: 30500,
+        priceDisplay: "~$30,500",
+        description: "Trusted Clark forklift with 5,000 lb lifting capacity. Known for durability, low maintenance costs, and excellent operator visibility in tight warehouse environments.",
+        image: clark5000,
+      },
+      {
+        name: "2025 Lift Hero 22,000 lb Capacity Forklift",
+        price: 132263,
+        priceDisplay: "~$132,263",
+        description: "Heavy-duty 22,000 lb capacity forklift designed for the most demanding industrial operations. Engineered for maximum lifting power, stability, and long-term reliability.",
+        image: liftHero22000,
       },
     ],
   },
